@@ -1,21 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
     optimizePackageImports: [],
-    webpackBuildWorker: true,
+    webpackBuildWorker: false,
   },
   images: {
     unoptimized: true,
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'http://localhost:8080/api/:path*',
-      },
-    ]
   },
   webpack: (config) => {
     config.optimization = {

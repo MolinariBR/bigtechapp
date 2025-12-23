@@ -154,7 +154,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
                   if (token) headers['Authorization'] = `Bearer ${token}`
 
                   // Tentar notificar backend para limpar cookie de refresh
-                  await fetch('/api/auth/logout', {
+                  await fetch('https://bigtechapi.squareweb.app/api/auth/logout', {
                     method: 'POST',
                     headers,
                     credentials: 'include'

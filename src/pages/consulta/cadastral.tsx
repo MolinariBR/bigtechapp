@@ -56,7 +56,7 @@ export default function ConsultaCadastral() {
         setLoadingServices(true)
 
         // Buscar serviços do plugin infosimples via API REST
-        const response = await fetch('/api/plugins/infosimples/services', {
+        const response = await fetch('https://bigtechapi.squareweb.app/api/plugins/infosimples/services', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -125,7 +125,7 @@ export default function ConsultaCadastral() {
 
     try {
       // Executar consulta via plugin
-      const response = await fetch('/api/plugins/infosimples/execute', {
+      const response = await fetch('https://bigtechapi.squareweb.app/api/plugins/infosimples/execute', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -18,6 +18,8 @@ export default function LoginPage() {
   const [showTenantModal, setShowTenantModal] = useState(false)
   const [tenantCreated, setTenantCreated] = useState(false)
 
+  const router = useRouter()
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
